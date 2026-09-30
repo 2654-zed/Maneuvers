@@ -109,23 +109,35 @@ These do not collapse into a score, and the brief was right to forbid one. The f
 
 ---
 
-## V4 predictions (dated 2026-09-30, for the next audit)
+## V4 predictions (registered 2026-09-30, for the next audit)
 
-So that V4 can be audited the way V1 was, it commits to the following. Each has a confirmation and a falsification condition; none is a hedge.
+So that V4 can be audited the way V1 was, it commits to the following. The canonical, machine-readable registration — with confirmation and falsification conditions and resolution sources for each — is `experiment/predictions/G1.json` (SHA-256 recorded in `experiment/generations.json`); this table is a summary. **p** is the registrant's probability that the confirmation condition holds; the next generation scores these with `experiment/score.py` (Brier), so calibration is on the record. Fourteen of nineteen sit in the 0.3–0.7 band by design (protocol §7.7).
 
-| ID | Prediction | Confirmed if | Falsified if |
+| ID | Prediction | p | Resolves |
 |---|---|---|---|
-| PV4-1 | No exploit of a *pre-existing* (not attacker-created) sole-required-DVN LayerZero configuration with >$10M reservoir by 2027-03-31 | none occurs | one occurs |
-| PV4-2 | Cross-chain verification code defects (M-02) exceed attestation-configuration failures (M-01) in *realised* losses for 2026-10-01 → 2027-03-31 | M-02 realised > M-01 realised | M-01 realised > M-02 realised |
-| PV4-3 | At least two further public unprotected-initializer / uninitialized-facet takeovers (M-04) by 2027-03-31 | ≥2 post-mortemed instances | <2 |
-| PV4-4 | Chain- or protocol-level halt/rollback used in ≥3 incidents ≥$5M by 2027-03-31, and at least one contested in governance or court | both conditions | either fails |
-| PV4-5 | At least one further malicious-participant TSS attack (M-07) on a production threshold-signing network by 2027-09-30 | one post-mortemed instance | none |
-| PV4-6 | No public instance of time-lock synchronised fire (M-22) or routing parasite (M-19) by 2027-09-30 | none | one occurs — which would rehabilitate V1's combinatorial method |
-| PV4-7 | AI-agent maneuvers (M-09) remain below $25M cumulative realised for 2026-10-01 → 2027-09-30 | below | above — which would mean the corpus's "supercharger" claim was right on magnitude and V4 too conservative |
-| PV4-8 | At least one governance drain (M-05) succeeds *through* an execution timelock (i.e., delay present, not bypassed) by 2027-09-30 | one occurs | none — which would strengthen "no delay" as the load-bearing precondition |
-| PV4-9 | The facilitator address `0xce5ec733…c91` is either publicly identified as a payment/settlement service or publicly reported as a drainer by 2027-03-31 | either | neither — the ambiguity itself persists, and M-17 stays HYPOTHESIZED |
+| PV4-1 | No exploit of a PRE-EXISTING (not attacker-created) sole-required-DVN LayerZero configuration protecting a reservoir > $10M occurs between 2026-10-01 and 2027-03-31. | 0.80 | 2027-03-31 |
+| PV4-2 | Cross-chain verification CODE defects (M-02) exceed attestation-CONFIGURATION failures (M-01) in realised losses for 2026-10-01 to 2027-03-31. | 0.75 | 2027-03-31 |
+| PV4-3 | At least two further publicly post-mortemed unprotected-initializer or uninitialized-facet takeovers occur between 2026-10-01 and 2027-03-31. | 0.70 | 2027-03-31 |
+| PV4-4 | Chain- or protocol-level halt/rollback/freeze is used in >= 3 incidents with >= $5M at stake between 2026-10-01 and 2027-03-31, and at least one such use is contested in governance or in court. | 0.65 | 2027-03-31 |
+| PV4-5 | At least one further malicious-participant threshold-signature attack (a bonded/registered signer extracting key material or biasing key generation through protocol interaction) on a production network occurs between 2026-10-01 and 2027-09-30. | 0.35 | 2027-09-30 |
+| PV4-6 | No public instance of a time-lock synchronised-fire fleet (M-22) or an aggregator routing-parasite pool (M-19) is documented between 2026-10-01 and 2027-09-30. | 0.85 | 2027-09-30 |
+| PV4-7 | Cumulative realised losses from AI-agent permission-chain abuse (prompt injection, agent-wallet permission escalation, agent session-key compromise) stay below $25M for 2026-10-01 to 2027-09-30. | 0.60 | 2027-09-30 |
+| PV4-8 | At least one governance drain >= $1M succeeds THROUGH an execution timelock (delay present and not bypassed) between 2026-10-01 and 2027-09-30. | 0.40 | 2027-09-30 |
+| PV4-9 | The Arbitrum address 0xce5ec7336f863931fda2ee3e4b9dad99fcc53c91 is either publicly identified as a payment/settlement service or publicly reported as a drainer by 2027-03-31. | 0.30 | 2027-03-31 |
+| PV4-10 | DPRK-attributed share of full-year 2026 stolen crypto value is >= 50% per at least one of TRM, Chainalysis or Elliptic year-end reports. | 0.70 | 2027-02-28 |
+| PV4-11 | At least one collateral-valuation manipulation exploit (M-06) with realised loss >= $20M occurs between 2026-10-01 and 2027-03-31. | 0.55 | 2027-03-31 |
+| PV4-12 | Kelp (Evercrest) v. LayerZero Labs has no final merits judgment by 2027-09-30. | 0.85 | 2027-09-30 |
+| PV4-13 | At least one further incident >= $10M in which an exchange's or protocol's OWN signers sign attacker-chosen withdrawals without private-key theft (forged internal requests, compromised signing UI, or vendor path) occurs between 2026-10-01 and 2027-09-30. | 0.50 | 2027-09-30 |
+| PV4-14 | Reported 2026 full-year end-user phishing/signature-drain losses (ScamSniffer annual or equivalent) exceed the 2025 figure of $83.85M. | 0.55 | 2027-02-28 |
+| PV4-15 | No public, on-chain-documented advisor-parasite pattern (months-long sub-threshold extraction from retained victims by a trusted intermediary) is confirmed between 2026-10-01 and 2027-09-30. | 0.85 | 2027-09-30 |
+| PV4-16 | At least one further Cosmos-ecosystem governance or admin-update drain >= $1M occurs between 2026-10-01 and 2027-09-30. | 0.55 | 2027-09-30 |
+| PV4-17 | Realised losses from cross-chain verification code defects (M-02) exceed $100M for 2026-10-01 to 2027-03-31. | 0.60 | 2027-03-31 |
+| PV4-18 | A public tool or dashboard that enumerates exposed/uninitialized proxies population-wide on at least one major EVM chain is published by 2027-09-30. | 0.50 | 2027-09-30 |
+| PV4-19 | At least one further incident in which an attacker CAPTURES a cross-chain configuration role (delegate, DVN set, peer, ISM) rather than exploiting a pre-existing weak setting occurs between 2026-10-01 and 2027-09-30. | 0.45 | 2027-09-30 |
 
 **Falsification criterion for V4 as a whole.** If PV4-1, PV4-2 and PV4-4 all fail, the reservoir–trigger–constraint core is not tracking where losses come from, and the framework should be treated as descriptive only.
+
+**Why this matters for the experiment.** G0's twenty predictions carried no probabilities, so its hit rate (0.56 over 13 resolvable) cannot be compared to a calibration score. From G1 onward every generation is Brier-scorable, and the experiment's central question — improvement versus explanation — is decided on these forward-looking scores under the controls in `experiment/PROTOCOL.md`, not on how well the next version explains the next window.
 
 ## Closing statement
 

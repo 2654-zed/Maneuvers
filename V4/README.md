@@ -25,4 +25,6 @@
 
 **Six ways to misread V4** (from `../reports/framework_failure_analysis.md` §7): OBSERVED means public instances exist, not that Layer 3 observed it; base-rate notes are obligations, not measurements; value-weighted claims are not count-weighted claims; demoted hypotheses are unobserved, not refuted; M-13 records rollbacks, it does not endorse them; window-period dollar aggregates come from DefiLlama labels with empty source fields and should be read as ±50%.
 
+**Experiment context.** V4 is generation G1's framework in the longitudinal experiment in `experiment/PROTOCOL.md`. Its pre-registered predictions are `experiment/predictions/G1.json`; G2 scores them and writes V5.
+
 **Open obligations on the corpus owner** (things V4 could not resolve from public data): outcomes of the two cadence forecasts (P-02, P-03); the Pattern F re-scan at ≥90 days; the population-scale pass-through audit for the facilitator addresses; the asset/destination query for the `0x80b12bd0` event; OLI checks on the `T1-d5351e977044` funders and on the Iteration-I mass-drain funder; a benign-cohort baseline for every topology signal.

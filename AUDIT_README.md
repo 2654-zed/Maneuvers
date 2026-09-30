@@ -13,4 +13,6 @@ Read in this order:
 7. `reports/model_comparison.md` — model-to-model comparison and the counterfactual test (Phases 11–12; the historical model's identity is revealed only here)
 8. `reports/final_assessment.md` — direct answers, plus V4's own dated predictions (Phase 13)
 
+This audit is generation **G1** of the longitudinal experiment described in `experiment/PROTOCOL.md` (research question, hypotheses, controls, metrics). G0's predictions and G1's pre-registered predictions are in `experiment/predictions/`; scored metrics in `experiment/metrics/`.
+
 Evidence: `reports/evidence/` — the audit's own on-chain reads, two fact-check reports, a post-revision incident survey, and the script that generates the claim ledger. Evidence files carry provenance headers; the two verification reports and the survey are model-generated research output and every figure in them is a pointer to a cited URL, not a primary fact.

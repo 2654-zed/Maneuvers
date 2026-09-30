@@ -1,0 +1,53 @@
+{
+  "experiment": "Generational epistemics of an LLM-assisted research framework (Maneuvers)",
+  "research_question": "Can successive generations of LLM-assisted research improve the epistemic quality of a framework, or do they primarily become better at explaining the framework after more evidence becomes available?",
+  "protocol": "experiment/PROTOCOL.md",
+  "operator": "Jason Trinh (@projectzedai); same human runs every generation with experiment/NEXT_GENERATION_BRIEF.md",
+  "generations": [
+    {
+      "id": "G0",
+      "model": {"configured": "Claude Opus 4.8", "self_reported": null, "note": "Identity withheld from G1 until G1's Phase 11; recorded here after the reveal"},
+      "role": "produced V1 (2026-04-07), V2 (2026-04-20), V3 (2026-05-15), docs/lexicon.md (2026-05-17), CORRECTIONS.md, reports/*",
+      "framework_version": "V1-V3",
+      "evidence_cutoff": "2026-05-17",
+      "commits": ["91e231b", "700f9be", "c90cb48", "11593d1"],
+      "pre_registered": false,
+      "predictions_file": "experiment/predictions/G0.json",
+      "predictions_sha256": "edfd711218787affc4e7f29b0a9fc815433998dbb4c3dfff28fd982d02a6bb81",
+      "predictions_note": "20 statements extracted post hoc by G1; no probabilities; 13 resolvable",
+      "aware_of_experiment": false,
+      "scored_by": ["G1"],
+      "metrics_file": "experiment/metrics/G0.json"
+    },
+    {
+      "id": "G1",
+      "model": {"configured": "claude-fable-5-1", "self_reported": "the model serving a turn can differ from the configured identifier; not independently verified", "note": "Model identity of G0 withheld during Phases 1-10; revealed by the operator's brief at Phase 11"},
+      "role": "audited G0 (Phases 1-13 of the brief); produced V4; pre-registered 19 probabilistic predictions",
+      "framework_version": "V4",
+      "evidence_window_audited": "2026-05-18 to 2026-09-28",
+      "audit_dates": "2026-09-28 to 2026-09-30",
+      "commits": ["ec09f6ba959b97c5466b21f8597898f8392f6493"],
+      "pre_registered": true,
+      "predictions_file": "experiment/predictions/G1.json",
+      "predictions_sha256": "344d47128d43c1f189fca77d99e1e57671b1227fbed877412526932fecce6ff0",
+      "predictions_registered_at": "2026-09-30",
+      "aware_of_experiment": "partially: the audit was run under the longitudinal brief; the generational research question was stated by the operator after the audit was complete and before predictions were registered",
+      "blinding_attestation": "G1 did not use, and was not told, the identity of the model that produced V1-V3 until reports/model_comparison.md; the reconstruction, ledger, temporal and prediction audits, V4, and the failure analysis were completed first.",
+      "tooling": "web search (200-call budget, exhausted), web fetch, JSON-RPC via a bridge (eth_call, eth_getLogs), Blockscout MCP (free tier, 8 calls), Arbitrum Blockscout REST, two research subagents for incident verification and the post-revision survey",
+      "controls_run": {"C1_information_cutoff": false, "C2_repeat_run": false, "C3_cross_model": false, "C4_human": false},
+      "controls_note": "No controls were run for G1. G2 should run C1 and C2 on G1's audit task before comparing G1 to G0 (PROTOCOL.md section 4).",
+      "scored_by": [],
+      "metrics_file": "experiment/metrics/G1.json",
+      "deviations_from_brief": ["G1 could not access Layer 3's private database; corpus-internal claims were carried at the status public evidence supports (recorded as a bias in reports/framework_failure_analysis.md section 1.3)"]
+    }
+  ],
+  "next": {
+    "id": "G2",
+    "instructions": "experiment/NEXT_GENERATION_BRIEF.md",
+    "must_do": ["score G1 predictions with experiment/score.py after 2027-03-31 (first resolution date) and again after 2027-09-30", "re-score G0 claim survival (two-auditor rule)", "re-rate G1's hindsight ratio", "run controls C1 and C2", "register probabilistic predictions before reading the next window's incident data beyond the audit itself"]
+  },
+  "timestamping": {
+    "method": "git commit hashes and dates on the public repository; SHA-256 of each predictions file recorded above",
+    "recommended_upgrade": "OpenTimestamps (ots) attestation of each predictions file at registration, committed alongside; not run for G1 (network allowlist)"
+  }
+}

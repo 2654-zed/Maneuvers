@@ -162,4 +162,6 @@ Evidence references: `reports/evidence/*` and `reports/claim_ledger.md` (C-numbe
 | P-19 | DVN-config detectors will emerge | 04-18/20 | CONFIRMED (convergent) | moderate |
 | P-20 | Flagging ≠ prevention | 04-18 | CONFIRMED | — |
 
+**Machine-readable version.** These twenty items, with outcome values, are `experiment/predictions/G0.json`; `experiment/score.py G0` computes the hit rate (0.56 over 13 resolvable; no Brier score possible because G0 stated no probabilities). G2 re-scores them independently per `experiment/PROTOCOL.md` §6.
+
 **Score, honestly stated.** Of twenty statements that can be read as predictions, four are confirmed with real content (P-10 as fact, P-13, P-14, P-19), three partially (P-05, P-06, P-09/P-15 by frequency only), five are falsified (P-01, P-04, P-11 in part, P-12, P-09 timing), five are unresolved because the corpus stopped recording outcomes, and three are non-falsifiable. The genuinely predictive content — the kind that could have changed a defender's behaviour before an event — is concentrated in P-05/P-19 (DVN configuration class), P-14 (custody architecture) and P-13 (override proliferation). The corpus's *claims about its own predictive record* (P-11, P-12) are the weakest items in it.
