@@ -1,0 +1,96 @@
+{
+  "generation": "G1",
+  "scored_at": null,
+  "predictions_file": "experiment/predictions/G1.json",
+  "predictions_sha256": "344d47128d43c1f189fca77d99e1e57671b1227fbed877412526932fecce6ff0",
+  "forward_looking": {
+    "a_prediction_score": {
+      "n_total": 19,
+      "n_resolved": 0,
+      "n_unresolved_or_nonfalsifiable": 19,
+      "n_nonfalsifiable": 0,
+      "hit_rate": null,
+      "n_with_probabilities": 19,
+      "brier": null,
+      "calibration_bins": null,
+      "p_distribution": {
+        "<0.3": 0,
+        "0.3-0.7": 14,
+        ">0.7": 5
+      },
+      "anti_gaming_rule_met": true
+    },
+    "b_claim_survival": {
+      "value": null,
+      "how_to_measure": "share of this generation's claims still SUPPORTED/PARTIALLY at the audit two generations later; fill after G(n+2)"
+    },
+    "c_overclaim": null,
+    "d_retraction_propagation": {
+      "value": null,
+      "how_to_measure": "of claims this generation retired, share still cited live in its own later files (grep)"
+    },
+    "e_evidence_reproducibility": {
+      "value": null,
+      "how_to_measure": "share of Tier-A/OBSERVED claims the next auditor reproduced from primary sources"
+    },
+    "f_mechanism_embargo": {
+      "asserted_before_postmortem": null,
+      "later_contradicted": null
+    },
+    "g_citation_locatability": {
+      "located": null,
+      "not_found": null
+    },
+    "h_base_rates_measured": {
+      "count": 0,
+      "how_to_measure": "number of detection signals with a measured benign-population rate in the framework text",
+      "note": "V4 attaches a base-rate NOTE (benign population named) to every signal but MEASURES none; recorded honestly as 0. A generation that measures even one benign-cohort rate will beat both G0 and G1 on this metric."
+    },
+    "i_calibration": "see a_prediction_score.calibration_bins (needs >= 20 resolved probabilistic predictions)"
+  },
+  "backward_looking": {
+    "a_descriptive_coverage": {
+      "value": null,
+      "how_to_measure": "share of window incidents >= $1M mapping to an existing category without creating a new one",
+      "note": "Not meaningful for the window V4 was built on (coverage is trivially high by construction). G2 measures V4's coverage of the 2026-10-01 -> next-audit window."
+    },
+    "b_categories": {
+      "categories": 27,
+      "by_status": {
+        "HYPOTHESIZED": 8,
+        "THEORETICAL": 2,
+        "STRONGLY INFERRED": 3,
+        "HYPOTHESIZED (downgraded)": 1,
+        "OBSERVED": 13
+      },
+      "added_vs_predecessor": 5,
+      "removed_vs_predecessor": 6,
+      "broadened": 4,
+      "note": "counts from V4/CHANGELOG_FROM_V3.md"
+    },
+    "c_volume": {
+      "framework_and_audit_bytes": 274203,
+      "files": [
+        "V4/MANEUVERS.md",
+        "V4/FRAMEWORK.md",
+        "V4/README.md",
+        "V4/CHANGELOG_FROM_V3.md",
+        "V4/COMPETING_EXPLANATIONS.md",
+        "reports/historical_reconstruction.md",
+        "reports/claim_ledger.md",
+        "reports/temporal_audit.md",
+        "reports/prediction_audit.md",
+        "reports/framework_failure_analysis.md",
+        "reports/model_comparison.md",
+        "reports/final_assessment.md"
+      ]
+    },
+    "d_hindsight_ratio": {
+      "self_reported": 0.67,
+      "re_rated_by_next_generation": null,
+      "note": "reports/model_comparison.md section 12.6: roughly one third of the V3->V4 delta available on G0's own evidence (reasoning), two thirds required the window (hindsight). Self-reported; G2 re-rates."
+    }
+  },
+  "scored_by": null,
+  "registered_at": "2026-09-30"
+}

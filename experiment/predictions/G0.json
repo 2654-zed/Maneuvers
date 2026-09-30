@@ -1,0 +1,29 @@
+{
+  "generation": "G0",
+  "registered_at": null,
+  "registered_by": "extracted post hoc by G1 on 2026-09-28 from V1/V2/V3 and docs/lexicon.md; G0 did not pre-register and gave no probabilities",
+  "framework_version": "V1-V3 + lexicon 2026-05-17",
+  "scoring_rule": "No probabilities were stated, so no Brier score is possible. Hit rate is reported over resolvable predictions; NON-FALSIFIABLE and UNRESOLVED items are counted separately. Outcomes and strengths are as recorded in reports/prediction_audit.md (G1's assessment); G2 should re-score independently per PROTOCOL.md section 6 step 4.",
+  "predictions": [
+    {"id": "P-01", "date": "2026-04-18", "statement": "Expect further copies within 30 days per the strategy_lifecycle model (oracle-manipulation + lending family).", "outcome": "FALSIFIED", "outcome_value": 0, "strength": "moderate"},
+    {"id": "P-02", "date": "2026-05-05", "statement": "Forecast iter_9 (2026-05-07 ~10:02 UTC) is the next falsifiability test (drainer-spawn hub 0xf7883e3f).", "outcome": "UNRESOLVED", "outcome_value": null, "strength": null},
+    {"id": "P-03", "date": "2026-05-10", "statement": "Expect a fourth self-deploying mass-drain instance within 1-3 days of III; if absent for >5 days, the cadence framing weakens.", "outcome": "UNRESOLVED", "outcome_value": null, "strength": null},
+    {"id": "P-04", "date": "2026-05-15", "statement": "THORChain resolves to one of four enumerated mechanism paths (attestation forgery / proof defect / validator key compromise / native-swap asymmetry).", "outcome": "FALSIFIED", "outcome_value": 0, "strength": "strong"},
+    {"id": "P-05", "date": "2026-04-20", "statement": "Any adapter with >$10M pooled deposits and a 1-of-1 DVN is a pre-validated Kelp-class risk; industry-wide exposure.", "outcome": "PARTIALLY CONFIRMED", "outcome_value": 0.5, "strength": "moderate"},
+    {"id": "P-06", "date": "2026-04-20", "statement": "2026 attacks will target operational layers around key management, not the keys themselves (attributed to Blockaid Jan 2026; attribution not found).", "outcome": "CONFIRMED by value (H1); mixed Q3", "outcome_value": 0.75, "strength": "moderate"},
+    {"id": "P-07", "date": "2026-04-07", "statement": "Time-lock synchronised fire is the highest-value speculative category / highest-leverage addition.", "outcome": "NON-FALSIFIABLE / TOO BROAD", "outcome_value": null, "strength": null},
+    {"id": "P-08", "date": "2026-04-18", "statement": "Advisor-parasite candidates will surface once corpus age >= 90 days (re-scan triggers).", "outcome": "UNRESOLVED", "outcome_value": null, "strength": null},
+    {"id": "P-09", "date": "2026-04-18", "statement": "Attack techniques move EARLY -> ARMS_RACE within ~15 days of public demonstration.", "outcome": "PARTIALLY CONFIRMED (replication) / FALSIFIED (timing)", "outcome_value": 0.25, "strength": "moderate"},
+    {"id": "P-10", "date": "2026-04-18", "statement": "A continuous DVN-configuration monitor would have flagged Kelp at block 24,500,000 or earlier with zero ambiguity.", "outcome": "CONFIRMED (retrodiction; reproduced on-chain)", "outcome_value": 1, "strength": "strong"},
+    {"id": "P-11", "date": "2026-05-15", "statement": "V2 predicted the surface that produced the May wave (Wasabi, Renegade, cross-chain surface).", "outcome": "PARTIALLY CONFIRMED (Wasabi, category level) / FALSIFIED (Renegade) / NON-FALSIFIABLE (cross-chain)", "outcome_value": 0.25, "strength": "strong"},
+    {"id": "P-12", "date": "2026-04-20", "statement": "6-of-14 observed validates the combinatorial threat-modelling approach.", "outcome": "FALSIFIED", "outcome_value": 0, "strength": "strong"},
+    {"id": "P-13", "date": "2026-04-20", "statement": "Catastrophic losses force centralised overrides (freezes, councils, forks); kill-switch governance worth measuring per protocol.", "outcome": "CONFIRMED (direction)", "outcome_value": 1, "strength": "moderate"},
+    {"id": "P-14", "date": "2026-04-20", "statement": "Lock-and-release custody produces more realised harm than mint-burn.", "outcome": "CONFIRMED", "outcome_value": 1, "strength": "strong"},
+    {"id": "P-15", "date": "2026-05", "statement": "Agentic AI supercharges confused-deputy incidents.", "outcome": "PARTIALLY CONFIRMED (frequency up; magnitude small)", "outcome_value": 0.5, "strength": "weak"},
+    {"id": "P-16", "date": "2026-04", "statement": "Camouflage ratio stable at 70-79% across chains and time.", "outcome": "UNRESOLVED externally; weakly falsified by own 04-29 data", "outcome_value": null, "strength": null},
+    {"id": "P-17", "date": "2026-04", "statement": "Publishing detection methodology triggers operator calibration against it.", "outcome": "NON-FALSIFIABLE / TOO BROAD", "outcome_value": null, "strength": null},
+    {"id": "P-18", "date": "2026-04-18", "statement": "Pattern D signal sharpens at corpus age >= 60 days.", "outcome": "UNRESOLVED", "outcome_value": null, "strength": null},
+    {"id": "P-19", "date": "2026-04-18", "statement": "DVN-configuration detectors will emerge (implicit in Attack 9 hooks).", "outcome": "CONFIRMED (convergent with Blockaid, Dune, LayerZero)", "outcome_value": 1, "strength": "moderate"},
+    {"id": "P-20", "date": "2026-04-18", "statement": "Flagging is not prevention; Layer 3 has no enforcement layer.", "outcome": "CONFIRMED", "outcome_value": 1, "strength": null}
+  ]
+}

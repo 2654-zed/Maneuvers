@@ -1,0 +1,169 @@
+{
+  "generation": "G0",
+  "scored_at": "2026-09-28/30",
+  "predictions_file": "experiment/predictions/G0.json",
+  "predictions_sha256": "edfd711218787affc4e7f29b0a9fc815433998dbb4c3dfff28fd982d02a6bb81",
+  "forward_looking": {
+    "a_prediction_score": {
+      "n_total": 20,
+      "n_resolved": 13,
+      "n_unresolved_or_nonfalsifiable": 7,
+      "n_nonfalsifiable": 3,
+      "hit_rate": 0.5576923076923077,
+      "n_with_probabilities": 0,
+      "brier": null,
+      "calibration_bins": null,
+      "p_distribution": null
+    },
+    "b_claim_survival": {
+      "value": null,
+      "how_to_measure": "share of this generation's claims still SUPPORTED/PARTIALLY at the audit two generations later; fill after G(n+2)"
+    },
+    "c_overclaim": {
+      "ledger_file": "reports/claim_ledger.json",
+      "n_claims": 97,
+      "overclaim_rate": 0.4845360824742268,
+      "share_tested_by_later_evidence": 0.6288659793814433,
+      "status_counts": {
+        "still_supported": 33,
+        "partially": 14,
+        "disconfirmed": 16,
+        "overstated": 16,
+        "under_specified": 11,
+        "untestable": 15,
+        "not_found": 3,
+        "non_falsifiable": 2
+      }
+    },
+    "d_retraction_propagation": {
+      "value": 0.21428571428571427,
+      "how_to_measure": "of claims this generation retired, share still cited live in its own later files (grep)",
+      "retired_claims_in_index": 14,
+      "still_cited_live_in_later_files": 3,
+      "items": [
+        "trust-amplification multiplier cited live in docs/lexicon.md Bug-Bounty Structural Gap entry (retired 2026-04-02; flagged by the corpus's own propagation watch-list)",
+        "'GoPlus 0/50' / '100% gap' framing cited live in Detection Gap as Product and Publishing-Induced Recursive Evasion (retired 2026-04-02)",
+        "Victim-to-Predator Pipeline presented as 'documented empirical pattern' in lexicon (narrative retired 2026-04-02: 49 -> 2)"
+      ],
+      "note": "denominator = rows in CORRECTIONS.md Quick Retirement Index; numerator = retired claims still asserted as live in docs/lexicon.md (2026-05-17)"
+    },
+    "e_evidence_reproducibility": {
+      "value": 0.6,
+      "how_to_measure": "share of Tier-A/OBSERVED claims the next auditor reproduced from primary sources",
+      "attempted": 10,
+      "reproduced_from_primary": 6,
+      "verified_secondary_only": 2,
+      "not_reproduced": 2,
+      "items": {
+        "primary": [
+          "Kelp attack tx fields (own RPC)",
+          "Kelp getConfig at block 24,500,000 = 1-of-1 (own eth_call)",
+          "Tornado funding of attack recipient at block 24,906,342 (own eth_getLogs)",
+          "Rhea account timeline and intents.near funding (NearBlocks API, subagent)",
+          "Wasabi helper deployment/bytecode across chains (RPC, subagent)",
+          "CE5E self-settlement shape on Arbitrum (Blockscout REST)"
+        ],
+        "secondary_only": [
+          "Hyperbridge MMR mechanism (Verichains/DarkNavy/Hyperbridge blog)",
+          "Drift durable-nonce mechanism (BlockSec/Blockaid/Drift statements)"
+        ],
+        "not_reproduced": [
+          "Aethir EOA-owner / private-key root cause (no source found; cited post says access-control defect)",
+          "THORChain lexicon mechanism (contradicted by official post-mortems)"
+        ]
+      }
+    },
+    "f_mechanism_embargo": {
+      "asserted_before_postmortem": 6,
+      "later_contradicted": 5,
+      "unsupported_not_contradicted": 1,
+      "items": {
+        "contradicted": [
+          "THORChain ObservedTx bit-flip (lexicon 05-17)",
+          "Juicebox V3 'access-control / admin-pattern' (V3)",
+          "Thetanuts 'cross-chain / admin-pattern' (V3)",
+          "April-30 dormant drain as Permit2 burst of 49 wallets in 3.5 min (lexicon)",
+          "Wasabi helper 'via CREATE2' (lexicon)"
+        ],
+        "unsupported": [
+          "Aethir private-key compromise / single EOA owner (V2, V3, lexicon)"
+        ]
+      }
+    },
+    "g_citation_locatability": {
+      "located": 5,
+      "not_found": 3,
+      "unverifiable_private": 1,
+      "value": 0.625,
+      "items": {
+        "located": [
+          "dev.to/cryip Aethir post (exists; content differs from what is quoted)",
+          "github.com/DK27ss/KelpDAO-294m-PoC",
+          "Blockaid Renegade alert",
+          "Arbitrum Security Council freeze statement",
+          "LayerZero incident statement"
+        ],
+        "not_found": [
+          "Blockaid 'January 2026' prediction about operational layers",
+          "Immunefi community response, April 18 2026",
+          "Aethir dev.to quotations ('The legitimate owner was just an eoa'; 'They had no time wait mechanism')"
+        ],
+        "unverifiable": [
+          "Cantina rejection quote 2026-03-25 (private submission)"
+        ]
+      },
+      "note": "web-search budget was exhausted before an exhaustive search; NOT FOUND is not a finding of fabrication"
+    },
+    "h_base_rates_measured": {
+      "count": 0,
+      "how_to_measure": "number of detection signals with a measured benign-population rate in the framework text",
+      "note": "The 2026-04-29 camouflage robustness check compares corpus sub-cohorts, not a benign population; Pattern D's 44/100 'fresh identities' is a within-sample split, not a base rate. No detection signal in V1-V3/lexicon has a measured benign-population rate."
+    },
+    "i_calibration": "see a_prediction_score.calibration_bins (needs >= 20 resolved probabilistic predictions)"
+  },
+  "backward_looking": {
+    "a_descriptive_coverage": {
+      "value": null,
+      "how_to_measure": "share of window incidents >= $1M mapping to an existing category without creating a new one",
+      "window": "2026-05-18 to 2026-09-28",
+      "incidents_ge_1M_considered": 60,
+      "mapped_to_G0_numbered_attacks_without_new_category": 35,
+      "of_which_stretched_mappings": 5,
+      "value_strict": 0.5,
+      "value_lenient": 0.5833333333333334,
+      "value_weighted_note": "by realised value coverage is higher (~0.85) because the largest incidents (Liquid, Bitget-stretched, Humanity, Ostium, AFX, BonkDAO) map; the uncovered mass by count is classic logic bugs (no G0 category), weak key generation, consensus bugs, front-end compromises",
+      "method": "each incident in reports/evidence/post_revision_survey_2026-09-28.md section A.3 with >= $1M realised assigned by G1 to a V3 Attack number or to 'none'; 'stretched' = Bitget (no key theft) into 11a, Lazy Summer (stale valuation) into 12, Jared/Limit Break (approval abuse) into 1, Coinsbuy (undisclosed) into 11a",
+      "caveat": "single-rater; G2 should re-rate"
+    },
+    "b_categories": {
+      "categories": 14,
+      "candidates": 1,
+      "note": "Attacks 1-14 + candidate 15 (V3); lexicon patterns/typologies not counted"
+    },
+    "c_volume": {
+      "framework_and_audit_bytes": 445255,
+      "files": [
+        "POTENTIAL_ATTACKS_V1_ARCHIVE.md",
+        "POTENTIAL_ATTACKS_V2.md",
+        "POTENTIAL_ATTACKS_V3.md",
+        "docs/lexicon.md",
+        "CORRECTIONS.md",
+        "reports/extraction_event_008_kelp.md",
+        "reports/extraction_event_007_hyperbridge.md",
+        "reports/extraction_event_006_aethir.md",
+        "reports/extraction_event_004_rhea_finance.md",
+        "reports/case_CE5E_drainer_operation.md",
+        "reports/kelp_retrospective_replay.md",
+        "reports/cross_chain_import_candidates.md",
+        "reports/advisor_parasite_candidates.md"
+      ],
+      "bytes_per_ledger_claim": 4590.257731958763
+    },
+    "d_hindsight_ratio": {
+      "self_reported": null,
+      "re_rated_by_next_generation": null,
+      "note": "G0 did not produce a counterfactual self-assessment; not applicable"
+    }
+  },
+  "scored_by": "G1 (claude-fable-5-1 configured); see reports/prediction_audit.md and reports/claim_ledger.md"
+}
